@@ -157,15 +157,9 @@ lista_n1 = notas1.replace(",","").split()
 lista_n2 = notas2.replace(",","").split()
 
 #se convierten explicitamente las listas de notas a int
-indice = 0
-for i in lista_n1:
-    lista_n1[indice] = int(i)
-    indice+=1
+lista_n1 = [int(nota) for nota in lista_n1]
+lista_n2 = [int(nota) for nota in lista_n2]
 
-indice = 0
-for i in lista_n2:
-    lista_n2[indice] = int(i)
-    indice+=1
 
 #se crea una lista de tuplas con nombres y suma de notas
 lista_suma = [a + b for a, b in zip(lista_n1,lista_n2)]
