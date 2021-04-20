@@ -10,7 +10,7 @@ juegos = {}
 
 for i in csvreader:
     if i[6] not in ('' or ' '):
-        juegos[i[2]] = int(i[6])
+        juegos[i[0]] = int(i[6])
 
 max = Counter(juegos).most_common(10)
 print('Los 10 juegos con mas User rating: ')
